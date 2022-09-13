@@ -14,6 +14,7 @@ type User struct {
 	MobileNumber  int64  `json:"mobile_number"`
 	Username      string `json:"username"`
 	Password      string `json:"password"`
+	Role          string `json:"role"`
 	IsAdmin       bool   `json:"is_admin"`
 	Active        bool   `json:"active"`
 	EmailVerified bool   `json:"email_verified"`
@@ -36,9 +37,9 @@ func (user *User) Validate() error {
 	if user.Email == "" {
 		return errors.New("required email")
 	}
-	if user.Username == "" {
-		return errors.New("required username")
-	}
+	// if user.Username == "" {
+	// 	return errors.New("required username")
+	// }
 	if user.Password == "" {
 		return errors.New("required password")
 	}
