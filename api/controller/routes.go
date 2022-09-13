@@ -30,6 +30,8 @@ func (server *Server) initializeRoutes() {
 	server.setJSON("/users", server.GetUsers, "GET")
 	server.setJSON("/user/{id}", server.UpdateUser, "PUT")
 	server.setJSON("/user/{id}", server.DeleteUser, "DELETE")
+
+	server.setJSON("/student_info", server.StudentInfo, "POST")
 }
 
 func (server *Server) WelcomePage(w http.ResponseWriter, r *http.Request) {
