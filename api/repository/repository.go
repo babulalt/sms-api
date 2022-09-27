@@ -21,5 +21,6 @@ func Migrate(r *Repository) {
 		models.UserRole{},
 		models.Student{},
 		models.Address{},
+		models.ResetPassword{},
 	)
 }
